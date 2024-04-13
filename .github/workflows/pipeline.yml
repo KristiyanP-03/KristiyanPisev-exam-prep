@@ -1,0 +1,30 @@
+name: Test and Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_test:
+
+    runs-on: ubuntu-latest
+    
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js version 20.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+        cache: 'npm'
+        cache-dependency-path: ./14-Exam-Preparation-Resources/package-lock.json
+    - name: Run npm install
+      run: |
+        cd ./14-Exam-Preparation-Resources/
+        npm install
+    - name: Run ui tests
+      run: |
+        cd ./14-Exam-Preparation-Resources/
+        npm run test:ui
