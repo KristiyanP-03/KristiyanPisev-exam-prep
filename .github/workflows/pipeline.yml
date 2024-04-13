@@ -42,14 +42,14 @@ jobs:
           node-version: 20.x
           cache: 'npm'
           cache-dependency-path: ./14-Exam-Preparation-Resources/package-lock.json
-      - name: Install playwright brousers
-        run: |
-          cd ./14-Exam-Preparation-Resources/
-          npx playwright install
       - name: Run npm install
         run: |
           cd ./14-Exam-Preparation-Resources/
           npm install
+      - name: Install playwright brousers
+        run: |
+          cd ./14-Exam-Preparation-Resources/
+          npx playwright install
       - name: Start the app
         run: |
           cd ./14-Exam-Preparation-Resources/
