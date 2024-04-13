@@ -24,7 +24,7 @@ jobs:
       run: |
         cd ./14-Exam-Preparation-Resources/
         npm install
-    - name: Run ui tests
+    - name: Run unit tests
       run: |
         cd ./14-Exam-Preparation-Resources/
-        npm run test:ui
+        npm run test:unit
