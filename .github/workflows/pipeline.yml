@@ -21,6 +21,10 @@ jobs:
         cache: 'npm'
         cache-dependency-path: ./14-Exam-Preparation-Resources/package-lock.json
     - name: Run npm install
-      run: cd 14-Exam-Preparation-Resources npm install
+      run: |
+        cd ./14-Exam-Preparation-Resources/
+        npm install
     - name: Run unit tests
-      run: cd 14-Exam-Preparation-Resources npm test:unit
+      run: |
+        cd ./14-Exam-Preparation-Resources/
+        npm test:unit
