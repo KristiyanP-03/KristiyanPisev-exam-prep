@@ -28,3 +28,5 @@ jobs:
       run: |
         cd ./14-Exam-Preparation-Resources/
         npm run test:unit
+    - name: Display name
+      run: echo "KristiyqnPisev"
