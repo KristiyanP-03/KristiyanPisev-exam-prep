@@ -47,7 +47,7 @@ jobs:
           cd ./14-Exam-Preparation-Resources/
           npm install
       - name: Install playwright brousers
-        run: npm playwright install
+        run: npx playwright install
       - name: Start the app
         run: npm start &
       - name: Run ui tests
