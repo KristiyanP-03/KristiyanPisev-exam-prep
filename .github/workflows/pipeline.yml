@@ -18,15 +18,10 @@ jobs:
       with:
         node-version: 20.x
         cache: 'npm'
-        cache-dependency-path: ./14-Exam-Preparation-Resources/package-lock.json
     - name: Run npm install
-      run: |
-        cd ./14-Exam-Preparation-Resources/
-        npm install
+      run: npm install
     - name: Run unit tests
-      run: |
-        cd ./14-Exam-Preparation-Resources/
-        npm run test:unit
+      run: test:unit
     - name: Display name
       run: echo "KristiyqnPisev"
   
@@ -41,21 +36,12 @@ jobs:
         with:
           node-version: 20.x
           cache: 'npm'
-          cache-dependency-path: ./14-Exam-Preparation-Resources/package-lock.json
       - name: Run npm install
-        run: |
-          cd ./14-Exam-Preparation-Resources/
-          npm install
+        run: npm install
       - name: Install playwright brousers
-        run: |
-          cd ./14-Exam-Preparation-Resources/
-          npx playwright install
+        run: npx playwright install
       - name: Start the app
-        run: |
-          cd ./14-Exam-Preparation-Resources/
-          npm start &
+        run: npm start &
       - name: Run ui tests
-        run: |
-          cd ./14-Exam-Preparation-Resources/
-          npm run test:ui
+        run: npm run test:ui
 
